@@ -26,9 +26,9 @@ The Center for Ocean-Land-Atmosphere Studies (COLA) in the Department of Atmosph
 
 To login to the COLA computers, you need secure shell (ssh) software. The software differs based on what type of computer you have. 
 
-_macOS_
+#### macOS
 For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
-_Windows_
+#### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
 .challenge
@@ -50,16 +50,17 @@ A window will appear that looks something like (look may vary depending on versi
 
 ![Xquartz window](assets/img/Xquartz-open.png)
 
-To connect to a COLA computer, type the following and replace `username` with your username:
+To connect to the computer `cola3` , type the following and replace `username` with your username:
 
 ~~~
 $ ssh -Y -l username@cola3.gmu.edu
 ~~~
 {: .language-bash}
 
-This will log you into the cola3 computer.
-
-
 _Windows_
 Launch the MobusXterm software you downloaded.  Click `Session`->`SSH` 
 
+## Login to a different cola computer
+COLA computers are cola1, cola2, cola3, ... , cola7
+Choose a computer other than cola3 and login to it.
+.{challenge}
