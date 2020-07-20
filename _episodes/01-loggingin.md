@@ -32,12 +32,12 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
-> ## Download and install the correct ssh software for your computer
->
-> Download the correct software for your computer 
-> Follow the instructions on your computer to install the software
->
-{: .challenge}
+[//]> ## Download and install the correct ssh software for your computer
+[//]>
+[//]> Download the correct software for your computer 
+[//]> Follow the instructions on your computer to install the software
+[//]>
+[//]{: .challenge}
 
 > ## In this class, you can
 >
@@ -54,7 +54,7 @@ You received a username and password from our system administrator.  You will ne
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
 A window will appear that looks something like (look may vary depending on version of macOS and/or some default settings in `Xquartz`):
 
-![Xquartz window](https://github.com/kpegion/AOES-CLIM-intro-cola-computing/blob/gh-pages/assets/img/Xquartz-open.png)
+[//]![Xquartz window](https://github.com/kpegion/AOES-CLIM-intro-cola-computing/blob/gh-pages/assets/img/Xquartz-open.png)
 
 To connect to the computer `cola1` , type the following and replace `username` with your username:
 
