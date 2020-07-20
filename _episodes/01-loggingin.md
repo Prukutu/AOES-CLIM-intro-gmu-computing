@@ -43,6 +43,7 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 >
 > * Raise your hand when you need assistance or have a question
 > * Indicate you are done with a Challenge in the colaborative document
+>
 .{callout}
 
 ### Logging in
