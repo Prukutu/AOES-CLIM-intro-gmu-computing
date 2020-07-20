@@ -1,5 +1,5 @@
 ---
-title: "How to login"
+title: "Logging into COLA Computers"
 teaching: 5
 exercises: 0
 questions:
@@ -31,9 +31,14 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
-> ## Download and install the correct ssh software for your computer. 
-> Download and install
-.{challenge}
+
+> ## Download and install the correct ssh software for your computer
+>
+> text
+> text
+> text
+>
+{: .challenge}
 
 ## In this class, you can
 * Raise your hand when you need assistance or have a question
@@ -62,15 +67,9 @@ Enter your password when prompted.
 #### On Windows
 Launch the MobusXterm software you downloaded.  Click `Session`->`SSH` 
 
-## Login to a different cola computer
-COLA computers are cola1, cola2, cola3, ... , cola7
-Choose a computer other than cola3 and login to it.
-.{challenge}
-
-> ## Challenge Title
+> ## Login to a different COLA computer
 >
-> text
-> text
-> text
+> COLA computers are cola1, cola2, cola3, ... , cola7
+> Choose a computer other than cola3 and login to it.
 >
 {: .challenge}
