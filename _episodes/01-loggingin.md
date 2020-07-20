@@ -55,21 +55,40 @@ A window will appear that looks something like (look may vary depending on versi
 
 ![Xquartz window](https://github.com/kpegion/AOES-CLIM-intro-cola-computing/blob/gh-pages/assets/img/Xquartz-open.png)
 
-To connect to the computer `cola3` , type the following and replace `username` with your username:
+To connect to the computer `cola1` , type the following and replace `username` with your username:
 
 ~~~
-$ ssh -Y -l username@cola3.gmu.edu
+$ ssh -Y -l username@cola1.gmu.edu
 ~~~
 {: .language-bash}
 
 Enter your password when prompted.
+You will now be required to change your password.  
 
 #### On Windows
-Launch the MobusXterm software you downloaded.  Click `Session`->`SSH` 
+1. Launch the MobusXterm software you downloaded.  
+2. Click `Session`->`SSH` 
+3. In the `Remote host` box, enter `cola1.gmu.edu` 
+4. Check the `Specify username` box and enter your `username`
+5. Click OK
+6. Enter your password when prompted
+7. Select No when asked to save your password.  
+
+You will now be required to change your password.  Follow the prompts change your password.
+
+> ## Password Requirements
+>
+> * [Password Complexity] (https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
+> * Keep your password secure and in a safe place
+> * Do not share your password.
+> * Do not store your password in plain text. 
+> * Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+>
+.{callout}
 
 > ## Login to a different COLA computer
 >
 > COLA computers are cola1, cola2, cola3, ... , cola7
-> Choose a computer other than cola3 and login to it.
+> Choose a computer other than cola1 and login to it.
 >
 {: .challenge}
