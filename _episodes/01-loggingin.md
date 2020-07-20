@@ -44,7 +44,7 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 
 You received a username and password from our system administrator.  You will need this to login to the COLA computers.
 
-_macOS_
+#### On _macOS_
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
 A window will appear that looks something like (look may vary depending on version of macOS and/or some default settings in `Xquartz`):
 
@@ -57,7 +57,9 @@ $ ssh -Y -l username@cola3.gmu.edu
 ~~~
 {: .language-bash}
 
-_Windows_
+Enter your password when prompted.
+
+#### On Windows
 Launch the MobusXterm software you downloaded.  Click `Session`->`SSH` 
 
 ## Login to a different cola computer
@@ -65,10 +67,10 @@ COLA computers are cola1, cola2, cola3, ... , cola7
 Choose a computer other than cola3 and login to it.
 .{challenge}
 
-> ## Callout Title
+> ## Challenge Title
 >
 > text
 > text
 > text
 >
-{: .callout}
+{: .challenge}
