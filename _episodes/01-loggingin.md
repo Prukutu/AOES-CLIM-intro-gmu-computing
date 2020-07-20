@@ -71,8 +71,4 @@ Choose a computer other than cola3 and login to it.
 > text
 > text
 >
-> ~~~
-> code
-> ~~~
-> {: .source}
 {: .callout}
