@@ -13,7 +13,7 @@ keypoints:
 - "COLA computers that you can log into are cola1-7"
 - "Secure shell (ssh) software is needed to login to COLA computers"
 ---
-### Why do I need to login to COLA computers instead of using my own computer?
+### Why do I need to login to another computer instead of using my own computer?
 1. In atmosphere, ocean, and climate science most of data analysis work is done on Unix or Linux computers. These types of computers have more computational capability, more memore, and disk (or hard drive) space than a personal computer.  We need this to handle the many large datasets used in climate data analysis.  
 2. COLA computers already contain the datasets we will work with.  These datasets are too large for your home computer and would take months to download. 
 3. Unix computers use a command line interface that allow us to automate our data processing tasks much faster than a graphical user interface (GUI).  
@@ -32,7 +32,7 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
 > ## Download and install the correct ssh software for your computer. 
->
+> Download and install
 .{challenge}
 
 ## In this class, you can
@@ -64,3 +64,15 @@ Launch the MobusXterm software you downloaded.  Click `Session`->`SSH`
 COLA computers are cola1, cola2, cola3, ... , cola7
 Choose a computer other than cola3 and login to it.
 .{challenge}
+
+> ## Callout Title
+>
+> text
+> text
+> text
+>
+> ~~~
+> code
+> ~~~
+> {: .source}
+{: .callout}
