@@ -31,8 +31,8 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
-.challenge
-## Download and install the correct ssh software for your computer. 
+> ## Download and install the correct ssh software for your computer. 
+>
 .{challenge}
 
 ## In this class, you can
