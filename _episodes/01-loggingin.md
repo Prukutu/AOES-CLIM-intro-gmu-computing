@@ -10,8 +10,9 @@ objectives:
 - "Explain what computer systems exist at COLA to log into"
 - "Explain how to login to the COLA computers from a learner's computer"
 keypoints:
+- "You need to use COLA computers for this class"
 - "COLA computers that you can log into are cola1-7"
-- "Secure shell (ssh) software is needed to login to COLA computers"
+- "Secure (ssh) software is used to login to COLA computers"
 ---
 ### Why do I need to login to another computer instead of using my own computer?
 1. In atmosphere, ocean, and climate science most of data analysis work is done on Unix or Linux computers. These types of computers have more computational capability, more memore, and disk (or hard drive) space than a personal computer.  We need this to handle the many large datasets used in climate data analysis.  
@@ -31,18 +32,17 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
-
 > ## Download and install the correct ssh software for your computer
 >
-> text
-> text
-> text
+> Download the correct software for your computer 
+> Follow the instructions on your computer to install the software
 >
 {: .challenge}
 
-## In this class, you can
-* Raise your hand when you need assistance or have a question
-* Indicate you are done with a Challenge in the colaborative document
+> ## In this class, you can
+>
+> * Raise your hand when you need assistance or have a question
+> * Indicate you are done with a Challenge in the colaborative document
 .{callout}
 
 ### Logging in
