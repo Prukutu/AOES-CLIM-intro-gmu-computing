@@ -70,13 +70,13 @@ You will now be required to change your password.  Follow the prompts change you
 
 > ## Password Requirements
 >
-> * [Password Complexity] (https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
-> * Keep your password secure and in a safe place
-> * Do not share your password.
-> * Do not store your password in plain text. 
-> * Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+> *[Password Complexity] (https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
+> *Keep your password secure and in a safe place
+> *Do not share your password.
+> *Do not store your password in plain text. 
+> *Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
-.{callout}
+{: .callout}
 
 > ## Login to a different COLA computer
 >
