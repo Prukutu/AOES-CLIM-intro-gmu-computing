@@ -32,7 +32,7 @@ For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
 
-## Download and install the correct ssh software for your computer
+> ## Download and install the correct ssh software for your computer
 >
 > Download the correct software for your computer 
 > Follow the instructions on your computer to install the software
@@ -43,7 +43,7 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 
 You received a username and password from our system administrator.  You will need this to login to the COLA computers.
 
-#### On _macOS_
+#### On macOS
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
 A window will appear that looks something like (look may vary depending on version of macOS and/or some default settings in `Xquartz`):
 
@@ -71,10 +71,10 @@ You will now be required to change your password.  Follow the prompts change you
 > ## Password Requirements
 >
 > *[Password Complexity] (https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
-> *Keep your password secure and in a safe place
-> *Do not share your password.
-> *Do not store your password in plain text. 
-> *Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+> -Keep your password secure and in a safe place
+> -Do not share your password.
+> -Do not store your password in plain text. 
+> -Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
 {: .callout}
 
