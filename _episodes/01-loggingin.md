@@ -40,6 +40,14 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 >
 {: .challenge}
 
+> ## In this class, you can
+>
+> - Raise your hand when you need assistance or have a question
+>
+> - Indicate you are done with a Challenge in the colaborative document
+>
+{: .callout}
+
 ### Logging in
 
 You received a username and password from our system administrator.  You will need this to login to the COLA computers.
