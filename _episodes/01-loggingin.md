@@ -35,6 +35,7 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 > ## Download and install the correct ssh software for your computer
 >
 > Download the correct software for your computer 
+>
 > Follow the instructions on your computer to install the software
 >
 {: .challenge}
@@ -71,9 +72,13 @@ You will now be required to change your password.  Follow the prompts change you
 > ## Password Requirements
 >
 > *[Password Complexity] (https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
+>
 > -Keep your password secure and in a safe place
+>
 > -Do not share your password.
+>
 > -Do not store your password in plain text. 
+>
 > -Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
 {: .callout}
@@ -81,6 +86,7 @@ You will now be required to change your password.  Follow the prompts change you
 > ## Login to a different COLA computer
 >
 > COLA computers are cola1, cola2, cola3, ... , cola7
+>
 > Choose a computer other than cola1 and login to it.
 >
 {: .challenge}
