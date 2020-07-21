@@ -48,6 +48,8 @@ You received a username and password from our system administrator.  You will ne
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
 A window will appear that looks something like (look may vary depending on version of macOS and/or some default settings in `Xquartz`):
 
+![XQuartx window](../fig/Xquartz-open.png)
+
 To connect to the computer `cola1` , type the following and replace `username` with your username:
 
 ~~~
