@@ -15,8 +15,8 @@ keypoints:
 - "Secure (ssh) software is used to login to COLA computers"
 ---
 ### Why do I need to login to another computer instead of using my own computer?
-1. In atmosphere, ocean, and climate science most of data analysis work is done on Unix or Linux computers. These types of computers have more computational capability, more memore, and disk (or hard drive) space than a personal computer.  We need this to handle the many large datasets used in climate data analysis.  
-2. COLA computers already contain the datasets we will work with.  These datasets are too large for your home computer and would take months to download. 
+1. In atmosphere, ocean, and climate science most of our data analysis work is done on Unix or Linux computers. These types of computers have more computational capability, more memory, and more disk (or hard drive) space than a personal computer.  We need this to handle the many large datasets used in climate data analysis.  
+2. COLA computers already contain many of the datasets we will work with.  These datasets are too large for your home computer and would take weeks to months to download. 
 3. Unix computers use a command line interface that allow us to automate our data processing tasks much faster than a graphical user interface (GUI).  
 
 ### COLA Computers
@@ -31,6 +31,8 @@ To login to the COLA computers, you need secure shell (ssh) software. The softwa
 For a Mac computer, use software called [Xquartz](https://www.xquartz.org/)
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/)
+#### Linux
+The default Unix Shell for Linux operating systems is usually Bash. On most versions of Linux, it is accessible by running the (Gnome) Terminal or (KDE) Konsole or xterm, which can be found via the applications menu or the search bar. If your machine is set up to use something other than Bash, you can run it by opening a terminal and typing `bash`.
 
 > ## Download and install the correct ssh software for your computer
 >
@@ -44,19 +46,19 @@ For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobat
 >
 > - Raise your hand when you need assistance or have a question
 >
-> - Indicate you are done with a Challenge in the colaborative document
+> - Indicate you are done with an activity in the colaborative document
 >
 {: .callout}
 
 ### Logging in
 
-You received a username and password from our system administrator.  You will need this to login to the COLA computers.
+If you do not already have a COLA account, I will provide you with your username and password in class.
 
 #### On macOS
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
 A window will appear that looks something like (look may vary depending on version of macOS and/or some default settings in `Xquartz`):
 
-![XQuartx window](../fig/Xquartz-open.png)
+![XQuartz window](../fig/Xquartz-open.png)
 
 To connect to the computer `cola1` , type the following and replace `username` with your username:
 
@@ -79,15 +81,19 @@ You will now be required to change your password.
 
 You will now be required to change your password.  Follow the prompts change your password.
 
-> ## Password Requirements
+> ## Password Requirements & Policies
 >
-> -[Password Complexity](https://its.gmu.edu/working-with-its/it-security-office/it-security-standards/password-complexity-standard/)
+> -Password complexity requirements will be provided in class.
 >
 > -Keep your password secure and in a safe place
 >
 > -Do not share your password.
 >
+> -No one will every ask you for your password.  If you ever get an email asking for your password DO NOT respond to it, it is a phishing attempt.
+>
 > -Do not store your password in plain text. 
+>
+> -Passwords must be changed every 6-months
 >
 > -Follow the Mason [Responsible Use of Technology Policies](https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
