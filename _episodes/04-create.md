@@ -139,8 +139,23 @@ cd ~/data-shell/
 ```
 {: .language-bash}
 
-In our `thesis` directory we have a file `draft.txt`
-which isn't a particularly informative name,
+Let's create a file called `draft.txt` in our `thesis` directory using a text editor:
+```
+$ vi thesis/draft.txt
+```
+{: .language-bash}
+
+Let's type a few lines.  First, type the `i` character (this stands for insert)
+```
+It's not "publish or perish" any more,
+it's "share and thrive"
+```
+
+To save the file using this editor, use the `esc` key and then type `ZZ`
+
+In our `thesis` directory we now have a file `draft.txt`
+that contains a quote.  This is not
+a particularly informative name,
 so let's change the file's name using `mv`,
 which is short for 'move':
 
@@ -512,7 +527,7 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 > However, generally commands like `wc` and `ls` see the lists of
 > file names matching these expressions, but not the wildcards
 > themselves. It is the shell, not the other programs, that deals with
-> expanding wildcards, and this is another example of orthogonal design.
+> expanding wildcards.
 {: .callout}
 
 > ## List filenames matching a pattern
