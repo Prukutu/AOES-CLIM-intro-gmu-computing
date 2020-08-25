@@ -1,18 +1,19 @@
 ---
-title: "Introducing the Shell"
-teaching: 5
+title: "Shell Commands"
+teaching: 0
 exercises: 0
 questions:
 - "How do I use the Unix shell?"
 objectives:
-- "Explain when and why command-line interfaces should be used instead of graphical interfaces."
+- "Introduce Unix Commands, switches, and how to get more info"
 keypoints:
 - "Most commands take options (flags) which begin with a `-`."
 - "Identify the actual command, options, and filenames in a command-line call."
-- "Demonstrate the use of tab completion and explain its advantages."
+- "Highlight some switches that will be particularly useful."
 keypoints:
-- "The shell's main disadvantages are its primarily textual nature and how
-cryptic its commands and operation can be."
+- "Unix commands consist of the command, options or switches, and input to the command"
+- "Additional switches can be found using `man` or `--help`"
+
 ---
 ### Background
 
@@ -39,9 +40,9 @@ Most importantly:
 when typing commands, either from these lessons or from other sources,
 *do not type the prompt*, only the commands that follow it.
 
-Most of you indicated in the Pre-Course Survey that you use the Unix shell daily.  We will do a quick review of the most common Unix commands and useful switches, then we will spend a little more time on some less common, but very hhelpful Unix commands and features that will help you when working with Earth System Models and in general when working with Unix computers (e.g. the COLA computers).
+Most of you (77%) indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. I have found in previous classes than many times students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do to run Earth System Models on a super computer.  Therefore, we will review some Unix basics here and you will review some additional helpful command on your own prior to next class.
 
-ls means list the contents of the directory I am in
+`ls` means list the contents of the directory I am in
 ~~~
 $ ls
 ~~~
@@ -91,11 +92,6 @@ Unix commands have many **options** that are very useful.  Let's look at some fo
 > > see if a new output file was written.
 > {: .solution}
 {: .challenge}
-
-### Getting help
-
-`ls` has lots of other **options**. There are two common ways to find out how
-to use a command and what options it accepts:
 
 ### Getting help
 

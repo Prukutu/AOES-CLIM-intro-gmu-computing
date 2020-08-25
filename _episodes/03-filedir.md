@@ -1,7 +1,7 @@
 ---
 title: "Navigating Files and Directories"
-teaching: 30
-exercises: 10
+teaching: 0
+exercises: 0
 questions:
 - "How can I move around on my computer?"
 - "How can I see what files and directories I have?"
@@ -64,59 +64,11 @@ $ cd ..
 "the directory containing this one",
 or more succinctly,
 the **parent** of the current directory.
-Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
 
-~~~
-$ ls -F -a
-~~~
-{: .language-bash}
+The basic commands for navigating the filesystem on your computer:
+`pwd`, `ls` and `cd`.  Let's explore some variations on those commands. 
 
-~~~
-./   .bash_profile  data/       north-pacific-gyre/  pizza.cfg  thesis/
-../  creatures/     molecules/  notes.txt            solar.pdf  writing/
-~~~
-{: .output}
-
-`-a` stands for 'show all';
-it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory)
-As you can see,
-it also displays another special directory that's just called `.`,
-which means 'the current working directory'.
-It may seem redundant to have a name for it,
-but we'll see some uses for it soon.
-
-Note that in most command line tools, multiple options can be combined
-with a single `-` and no spaces between the options: `ls -F -a` is
-equivalent to `ls -Fa`.
-
-> ## Other Hidden Files
->
-> In addition to the hidden directories `..` and `.`, you may also see a file
-> called `.bash_profile`. This file usually contains shell configuration
-> settings. You may also see other files and directories beginning
-> with `.`. These are usually files and directories that are used to configure
-> different programs on your computer. The prefix `.` is used to prevent these
-> configuration files from cluttering the terminal when a standard `ls` command
-> is used.
-{: .callout}
-
-> ## Orthogonality
->
-> The special names `.` and `..` don't belong to `cd`;
-> they are interpreted the same way by every program.
-> For example,
-> if we are in `/Users/nelle/data`,
-> the command `ls ..` will give us a listing of `/Users/nelle`.
-> When the meanings of the parts are the same no matter how they're combined,
-> programmers say they are **orthogonal**:
-> Orthogonal systems tend to be easier for people to learn
-> because there are fewer special cases and exceptions to keep track of.
-{: .callout}
-
-These then, are the basic commands for navigating the filesystem on your computer:
-`pwd`, `ls` and `cd`.  Let's explore some variations on those commands.  What happens
+What happens
 if you type `cd` on its own, without giving
 a directory?
 
@@ -126,6 +78,8 @@ $ cd
 {: .language-bash}
 
 How can you check what happened?  `pwd` gives us the answer!
+It turns out that `cd` without an argument will return you to your home directory,
+which is great if you've gotten lost in your own filesystem.
 
 ~~~
 $ pwd
@@ -133,31 +87,38 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/homes/kpegion
 ~~~
 {: .output}
 
-It turns out that `cd` without an argument will return you to your home directory,
-which is great if you've gotten lost in your own filesystem.
+Let's get some data and examples to work with for this lesson:
 
-Let's try returning to the `data` directory from before.  Last time, we used
-three commands, but we can actually string together the list of directories
-to move to `data` in one step:
+First, copy the file `/homes/kpegion/classes/fa2020/data-shell.zip` to your home directory
 
 ~~~
-$ cd Desktop/data-shell/data
+$ cd
+$ cp /homes/kpegion/classes/fa2020/data-shell.zip .
+~~~
+{: .language-bash}
+
+Unizp the file:
+
+~~~
+$ unzip data-shell.zip
+~~~
+{: .language-bash}
+
+
+Let's go explore the directories we copied:
+~~~
+$ cd data-shell/data
 ~~~
 {: .language-bash}
 
 Check that we've moved to the right place by running `pwd` and `ls -F`
 
-If we want to move up one level from the data directory, we could use `cd ..`.  But
-there is another way to move to any directory, regardless of your
-current location.
-
-So far, when specifying directory names, or even a directory path (as above),
-we have been using **relative paths**.  When you use a relative path with a command
-like `ls` or `cd`, it tries to find that location  from where we are,
+Here we used the **relative path** to specify the directory.  When you use a relative path with a command
+like `ls` or `cd`, it tries to find that location from where we are,
 rather than from the root of the file system.
 
 However, it is possible to specify the **absolute path** to a directory by
@@ -177,12 +138,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/homes/kpegion/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd /homes/kpegion/data-shell
 ~~~
 {: .language-bash}
 
@@ -192,9 +153,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/Users/nelle`, then `~/data` is equivalent to
-> `/Users/nelle/data`. This only works if it is the first character in the
-> path: `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
+> directory is `/homes/nelle`, then `~/data` is equivalent to
+> `/homes/nelle/data`. This only works if it is the first character in the
+> path: `here/there/~/elsewhere` is *not* `here/there/homes/nelle/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
 > *the previous directory I was in*, which is faster than having to remember,
@@ -206,13 +167,13 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
 > ## Absolute vs Relative Paths
 >
-> Starting from `/Users/amanda/data`,
+> Starting from `/homes/amanda/data`,
 > which of the following commands could Amanda use to navigate to her home directory,
-> which is `/Users/amanda`?
+> which is `/homes/amanda`?
 >
 > 1. `cd .`
 > 2. `cd /`
-> 3. `cd /home/amanda`
+> 3. `cd /homes/amanda`
 > 4. `cd ../..`
 > 5. `cd ~`
 > 6. `cd home`
@@ -223,59 +184,12 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > ## Solution
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
-> > 3. No: Amanda's home directory is `/Users/amanda`.
-> > 4. No: this goes up two levels, i.e. ends in `/Users`.
-> > 5. Yes: `~` stands for the user's home directory, in this case `/Users/amanda`.
-> > 6. No: this would navigate into a directory `home` in the current directory if it exists.
+> > 3. No: Amanda's home directory is `/homes/amanda`.
+> > 4. No: this goes up two levels, i.e. ends in `/homes`.
+> > 5. Yes: `~` stands for the user's home directory, in this case `/homes/amanda`.
+> > 6. No: this would navigate into a directory `homes` in the current directory if it exists.
 > > 7. Yes: unnecessarily complicated, but correct.
 > > 8. Yes: shortcut to go back to the user's home directory.
 > > 9. Yes: goes up one level.
-> {: .solution}
-{: .challenge}
-
-> ## Relative Path Resolution
->
-> Using the filesystem diagram below, if `pwd` displays `/Users/thing`,
-> what will `ls -F ../backup` display?
->
-> 1.  `../backup: No such file or directory`
-> 2.  `2012-12-01 2013-01-08 2013-01-27`
-> 3.  `2012-12-01/ 2013-01-08/ 2013-01-27/`
-> 4.  `original/ pnas_final/ pnas_sub/`
->
-> ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
->
-> > ## Solution
-> > 1. No: there *is* a directory `backup` in `/Users`.
-> > 2. No: this is the content of `Users/thing/backup`,
-> >    but with `..` we asked for one level further up.
-> > 3. No: see previous explanation.
-> > 4. Yes: `../backup/` refers to `/Users/backup/`.
-> {: .solution}
-{: .challenge}
-
-> ## `ls` Reading Comprehension
->
-> Using the filesystem diagram below,
-> if `pwd` displays `/Users/backup`,
-> and `-r` tells `ls` to display things in reverse order,
-> what command(s) will result in the following output:
->
-> ~~~
-> pnas_sub/ pnas_final/ original/
-> ~~~
-> {: .output}
->
-> ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
->
-> 1.  `ls pwd`
-> 2.  `ls -r -F`
-> 3.  `ls -r -F /Users/backup`
->
-> > ## Solution
-> >  1. No: `pwd` is not the name of a directory.
-> >  2. Yes: `ls` without directory argument lists files and directories
-> >     in the current directory.
-> >  3. Yes: uses the absolute path explicitly.
 > {: .solution}
 {: .challenge}

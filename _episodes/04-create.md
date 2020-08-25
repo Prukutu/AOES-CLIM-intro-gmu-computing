@@ -1,7 +1,7 @@
 ---
 title: "Working With Files and Directories"
-teaching: 30
-exercises: 20
+teaching: 0
+exercises: 0
 questions:
 - "How can I create, copy, and delete files and directories?"
 - "How can I edit files?"
@@ -35,7 +35,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/homes/kpegion/data-shell
 ~~~
 {: .output}
 
@@ -75,14 +75,6 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 ~~~
 {: .output}
 
-> ## Two ways of doing the same thing
-> Using the shell to create a directory is no different than using a file explorer.
-> If you open the current directory using your operating system's graphical file explorer,
-> the `thesis` directory will appear there too.
-> While the shell and the file explorer are two different ways of interacting with the files,
-> the files and directories themselves are the same.
-{: .callout}
-
 > ## Good names for files and directories
 >
 > Complicated names of files and directories can make your life painful
@@ -118,88 +110,7 @@ $ ls -F thesis
 ~~~
 {: .language-bash}
 
-### Create a text file
-Let's change our working directory to `thesis` using `cd`,
-then run a text editor called Nano to create a file called `draft.txt`:
-
-~~~
-$ cd thesis
-$ nano draft.txt
-~~~
-{: .language-bash}
-
-> ## Which Editor?
->
-> When we say, '`nano` is a text editor' we really do mean 'text': it can
-> only work with plain character data, not tables, images, or any other
-> human-friendly media. We use it in examples because it is one of the
-> least complex text editors. However, because of this trait, it may
-> not be powerful enough or flexible enough for the work you need to do
-> after this workshop. On Unix systems (such as Linux and macOS),
-> many programmers use [Emacs](http://www.gnu.org/software/emacs/) or
-> [Vim](http://www.vim.org/) (both of which require more time to learn),
-> or a graphical editor such as
-> [Gedit](http://projects.gnome.org/gedit/). On Windows, you may wish to
-> use [Notepad++](http://notepad-plus-plus.org/).  Windows also has a built-in
-> editor called `notepad` that can be run from the command line in the same
-> way as `nano` for the purposes of this lesson.
->
-> No matter what editor you use, you will need to know where it searches
-> for and saves files. If you start it from the shell, it will (probably)
-> use your current working directory as its default location. If you use
-> your computer's start menu, it may want to save files in your desktop or
-> documents directory instead. You can change this by navigating to
-> another directory the first time you 'Save As...'
-{: .callout}
-
-Let's type in a few lines of text.
-Once we're happy with our text, we can press <kbd>Ctrl</kbd>+<kbd>O</kbd>
-(press the <kbd>Ctrl</kbd> or <kbd>Control</kbd> key and, while
-holding it down, press the <kbd>O</kbd> key) to write our data to disk
-(we'll be asked what file we want to save this to:
-press <kbd>Return</kbd> to accept the suggested default of `draft.txt`).
-
-<div style="width:80%; margin: auto;"><img alt="Nano in Action" src="../fig/nano-screenshot.png"></div>
-
-Once our file is saved, we can use <kbd>Ctrl</kbd>+<kbd>X</kbd> to quit the editor and
-return to the shell.
-
-> ## Control, Ctrl, or ^ Key
->
-> The Control key is also called the 'Ctrl' key. There are various ways
-> in which using the Control key may be described. For example, you may
-> see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
-> press the <kbd>X</kbd> key, described as any of:
->
-> * `Control-X`
-> * `Control+X`
-> * `Ctrl-X`
-> * `Ctrl+X`
-> * `^X`
-> * `C-x`
->
-> In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
-> This means that you can use `Control-G` to get help and `Control-O` to save your
-> file.
-{: .callout}
-
-`nano` doesn't leave any output on the screen after it exits,
-but `ls` now shows that we have created a file called `draft.txt`:
-
-~~~
-$ ls
-~~~
-{: .language-bash}
-
-~~~
-draft.txt
-~~~
-{: .output}
-
-> ## Creating Files a Different Way
->
-> We have seen how to create text files using the `nano` editor.
-> Now, try the following command:
+> ## Creating A File
 >
 > ~~~
 > $ touch my_file.txt
@@ -207,62 +118,24 @@ draft.txt
 > {: .language-bash}
 >
 > 1.  What did the `touch` command do?
->     When you look at your current directory using the GUI file explorer,
->     does the file show up?
->
 > 2.  Use `ls -l` to inspect the files.  How large is `my_file.txt`?
->
-> 3.  When might you want to create a file this way?
 >
 > > ## Solution
 > > 1.  The `touch` command generates a new file called `my_file.txt` in
-> >     your current directory.  You
-> >     can observe this newly generated file by typing `ls` at the
-> >     command line prompt.  `my_file.txt` can also be viewed in your
-> >     GUI file explorer.
+> >     your current directory. 
 > >
 > > 2.  When you inspect the file with `ls -l`, note that the size of
 > >     `my_file.txt` is 0 bytes.  In other words, it contains no data.
 > >     If you open `my_file.txt` using your text editor it is blank.
 > >
-> > 3.  Some programs do not generate output files themselves, but
-> >     instead require that empty files have already been generated.
-> >     When the program is run, it searches for an existing file to
-> >     populate with its output.  The touch command allows you to
-> >     efficiently generate a blank text file to be used by such
-> >     programs.
 > {: .solution}
 {: .challenge}
-
-> ## What's In A Name?
->
-> You may have noticed that all of Nelle's files are named 'something dot
-> something', and in this part of the lesson, we always used the extension
-> `.txt`.  This is just a convention: we can call a file `mythesis` or
-> almost anything else we want. However, most people use two-part names
-> most of the time to help them (and their programs) tell different kinds
-> of files apart. The second part of such a name is called the
-> **filename extension**, and indicates
-> what type of data the file holds: `.txt` signals a plain text file, `.pdf`
-> indicates a PDF document, `.cfg` is a configuration file full of parameters
-> for some program or other, `.png` is a PNG image, and so on.
->
-> This is just a convention, albeit an important one. Files contain
-> bytes: it's up to us and our programs to interpret those bytes
-> according to the rules for plain text files, PDF documents, configuration
-> files, images, and so on.
->
-> Naming a PNG image of a whale as `whale.mp3` doesn't somehow
-> magically turn it into a recording of whalesong, though it *might*
-> cause the operating system to try to open it with a music player
-> when someone double-clicks it.
-{: .callout}
 
 ## Moving files and directories
 Returning to the `data-shell` directory,
 
 ```
-cd ~/Desktop/data-shell/
+cd ~/data-shell/
 ```
 {: .language-bash}
 
@@ -447,7 +320,7 @@ quotations.txt
 > ~~~
 > {: .language-bash}
 > ~~~
-> /Users/jamie/data
+> /homes/jamie/data
 > ~~~
 > {: .output}
 > ~~~
@@ -472,18 +345,18 @@ quotations.txt
 > 4.   `proteins-saved.dat`
 >
 > > ## Solution
-> > We start in the `/Users/jamie/data` directory, and create a new folder called `recombine`.
+> > We start in the `/homes/jamie/data` directory, and create a new folder called `recombine`.
 > > The second line moves (`mv`) the file `proteins.dat` to the new folder (`recombine`).
 > > The third line makes a copy of the file we just moved.  The tricky part here is where the file was
-> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/Users/jamie`.
+> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/homes.jamie`.
 > > Notice that `..` is interpreted with respect to the current working
 > > directory, **not** with respect to the location of the file being copied.
-> > So, the only thing that will show using ls (in `/Users/jamie/data`) is the recombine folder.
+> > So, the only thing that will show using ls (in `/homes/jamie/data`) is the recombine folder.
 > >
-> > 1. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
+> > 1. No, see explanation above.  `proteins-saved.dat` is located at `/homes/jamie`
 > > 2. Yes
-> > 3. No, see explanation above.  `proteins.dat` is located at `/Users/jamie/data/recombine`
-> > 4. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
+> > 3. No, see explanation above.  `proteins.dat` is located at `/homes/jamie/data/recombine`
+> > 4. No, see explanation above.  `proteins-saved.dat` is located at `/homes/jamie`
 > {: .solution}
 {: .challenge}
 
