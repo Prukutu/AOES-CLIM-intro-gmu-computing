@@ -40,7 +40,7 @@ Most importantly:
 when typing commands, either from these lessons or from other sources,
 *do not type the prompt*, only the commands that follow it.
 
-Most of you (77%) indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. I have found in previous classes than many times students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do to run Earth System Models on a super computer.  Therefore, we will review some Unix basics here and you will review some additional helpful command on your own prior to next class.
+Most of you (80%) indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. I have found in previous classes than many times students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do to run Earth System Models on a super computer.  Therefore, we will review some Unix basics here and you will review some additional helpful command on your own prior to next class.
 
 `ls` means list the contents of the directory I am in
 ~~~
