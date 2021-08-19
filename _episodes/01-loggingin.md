@@ -52,7 +52,7 @@ The default Unix Shell for Linux operating systems is usually Bash. On most vers
 
 ### Logging in
 
-If you do not already have a COLA account, I will provide you with your username and password in class.
+If you do not already have a COLA account, we will provide you with your username and password in class (if not before). The pre-course survey should have informed us whether you already have an account.
 
 #### On macOS
 Launch the XQuartz software you downloaded and select `Shell`-> `New Window` from the menu in the upper left.
@@ -60,7 +60,7 @@ A window will appear that looks something like (look may vary depending on versi
 
 ![XQuartz window](../fig/Xquartz-open.png)
 
-To connect to the computer `cola1` , type the following and replace `username` with your username:
+To connect to the computer `cola1` , type the following and replace `username` with your assigned username:
 
 ~~~
 $ ssh -Y -l username@cola1.gmu.edu
@@ -68,7 +68,7 @@ $ ssh -Y -l username@cola1.gmu.edu
 {: .language-bash}
 
 Enter your password when prompted.
-You will now be required to change your password.  
+If this is the first time you have logged in, you will be required to change your password. 
 
 #### On Windows
 1. Launch the MobusXterm software you downloaded.  
@@ -79,19 +79,19 @@ You will now be required to change your password.
 6. Enter your password when prompted
 7. Select No when asked to save your password.  
 
-You will now be required to change your password.  Follow the prompts change your password.
+If this is the first time you have logged in, you will be required to change your password.  
 
 > ## Password Requirements & Policies
 >
 > -Password complexity requirements will be provided in class.
 >
-> -Keep your password secure and in a safe place
+> -Keep your password secure and in a safe place.
 >
 > -Do not share your password.
 >
 > -No one will every ask you for your password.  If you ever get an email asking for your password DO NOT respond to it, it is a phishing attempt.
 >
-> -Do not store your password in plain text. 
+> -Do not store your password on your laptop in plain text. 
 >
 > -Passwords must be changed every 6-months
 >
@@ -99,7 +99,7 @@ You will now be required to change your password.  Follow the prompts change you
 >
 {: .callout}
 
-> ## Login to a different COLA computer
+> ## Logging in to a different COLA computer
 >
 > COLA computers are cola1, cola2, cola3, ... , cola7
 >
