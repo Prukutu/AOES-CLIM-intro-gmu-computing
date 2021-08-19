@@ -12,7 +12,7 @@ keypoints:
 - "Highlight some switches that will be particularly useful."
 keypoints:
 - "Unix commands consist of the command, options or switches, and input to the command"
-- "Additional switches can be found using `man` or `--help`"
+- "Additional switches can be found using `man`, `info` or `--help`"
 
 ---
 ### Background
