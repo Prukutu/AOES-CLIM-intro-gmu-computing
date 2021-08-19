@@ -42,7 +42,7 @@ when typing commands, either from these lessons or from other sources,
 
 Many of you indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. Often students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do in this course.  Therefore, we will review some Unix basics here and you will review some additional helpful commands on your own prior to next class (note that the possibilities of what you can do with shell commands is practically limitless - feel free to read up, search the Internet and explore to learn more).
 
-`ls` means list the contents of the current directory (we will discuss files and directories in Week 2).
+`ls` means list the contents of the current directory.
 ~~~
 $ ls
 ~~~
