@@ -124,7 +124,7 @@ You will usually see both kinds listed when you get help for a command.
 
 Single-dash options are always single characters, and they can be chained together, e.g., `ls -asr`. 
 
-Douple-dash options are longer strings, usually in "plain English", and have to be listed separately, 
+Double-dash options are longer strings, usually in "plain English", and have to be listed separately, 
 e.g., `ls --all --size --reverse`. 
 
 Some options have both forms, some have one or the other. Single-dash options are the original approach from the early days of Unix, but restricts the number of options that can be defined, so double-dash was developed to allow for limitless options.
