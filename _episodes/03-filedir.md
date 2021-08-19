@@ -3,14 +3,14 @@ title: "Navigating Files and Directories"
 teaching: 0
 exercises: 0
 questions:
-- "How can I move around on my computer?"
+- "How can I move around the file system on the computer?"
 - "How can I see what files and directories I have?"
-- "How can I specify the location of a file or directory on my computer?"
+- "How can I specify the location of a file or directory on the computer?"
 objectives:
 - "Explain the similarities and differences between a file and a directory."
 - "Translate an absolute path into a relative path and vice versa."
 - "Construct absolute and relative paths that identify specific files and directories."
-- "Use options and arguments to change the behaviour of a shell command"
+- "Use options and arguments to change the behaviour of a shell command."
 - "Demonstrate the use of tab completion, and explain its advantages."
 keypoints:
 - "The file system is responsible for managing information on the disk."
@@ -26,12 +26,13 @@ keypoints:
 - "`..` means 'the directory above the current one'; `.` on its own means 'the current directory'."
 ---
 
-The part of the operating system responsible for managing files and directories
+The part of the operating system responsible for managing files and directories (where all your data are stored)
 is called the **file system**.
 It organizes our data into files,
 which hold information,
 and directories (also called 'folders'),
 which hold files or other directories.
+You are probably familiar with this idea from your own laptop. It works very similarly on Unix systems.
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
 To start exploring them, we'll go to our open shell window.
@@ -39,7 +40,7 @@ To start exploring them, we'll go to our open shell window.
 First let's find out where we are by running a command called `pwd`
 (which stands for 'print working directory'). Directories are like *places* - at any time
 while we are using the shell we are in exactly one place, called
-our **current working directory**. Commands mostly read and write files in the
+our **current working directory**. Commands, by default, read, write and execute files in the
 current working directory, i.e. 'here', so knowing where you are before running
 a command is important. `pwd` shows you where you are:
 
@@ -87,17 +88,17 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/kpegion
+/homes/pdirmeye
 ~~~
 {: .output}
 
 Let's get some data and examples to work with for this lesson:
 
-First, copy the file `/homes/kpegion/classes/fa2020/data-shell.zip` to your home directory
+First, copy the file `/homes/pdirmeye/classes/fa2021/data-shell.zip` to your home directory
 
 ~~~
 $ cd
-$ cp /homes/kpegion/classes/fa2020/data-shell.zip .
+$ cp /homes/pdirmeye/classes/fa2021/data-shell.zip .
 ~~~
 {: .language-bash}
 
@@ -138,12 +139,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/kpegion/data-shell/data
+/homes/pdirmeye/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /homes/kpegion/data-shell
+$ cd /homes/pdirmeye/data-shell
 ~~~
 {: .language-bash}
 
