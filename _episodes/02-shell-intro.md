@@ -122,9 +122,13 @@ You may have noticed that there may be single-dash options, e.g., `ls -F`
 and double-dash options, e.g., `ls --help`.
 You will usually see both kinds listed when you get help for a command. 
 
-Single-dash options are always single characters, and they can be chained together, e.g., `ls -asr`. 
+Single-dash options are always single characters, and they can be chained together, e.g.: `ls -asr` is the same as `ls -a -s -r`. 
 
-Double-dash options are longer strings, usually in "plain English", and have to be listed separately, 
-e.g., `ls --all --size --reverse`. 
+Double-dash options are longer strings, usually in "plain English", and must be listed separately, 
+e.g.: `ls --all --size --reverse`. 
+
+Usually the order doesn't matter - but check the documentation if things do not behave the way you expect.
 
 Some options have both forms, some have one or the other. Single-dash options are the original approach from the early days of Unix, but restricts the number of options that can be defined, so double-dash was developed to allow for limitless options.
+
+Finally, some options take arguments, e.g.: `ls --color=always`, which prints the names of files and directories in different colors depending on their types. Again, see documentation for valid choices.
