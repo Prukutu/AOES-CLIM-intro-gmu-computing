@@ -16,8 +16,8 @@ keypoints:
 - "`rm path` removes (deletes) a file."
 - "`*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`."
 - "`?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`."
-- "Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
-- "The shell does not have a trash bin: once something is deleted, it's really gone."
+- "Use of the Control key may be notated in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
+- "The shell does not have a trash bin: once something is deleted, it's really gone. REALLY!"
 - "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
 - "Depending on the type of work you do, you may need a more powerful text editor than Nano."
 ---
@@ -35,7 +35,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/kpegion/data-shell
+/homes/pdirmeye/data-shell
 ~~~
 {: .output}
 
@@ -87,6 +87,9 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 >    but since spaces are used to separate arguments on the command line
 >    it is better to avoid them in names of files and directories.
 >    You can use `-` or `_` instead (e.g. `north-pacific-gyre/` rather than `north pacific gyre/`).
+>    
+>    You may encounter files with spaces in their names if they have been uploaded from a laptop.
+>    To reference such files from the command line, enclose the entire name in quotes (`""`).
 >
 > 2. Don't begin the name with `-` (dash).
 >
@@ -423,6 +426,7 @@ ls: cannot access 'quotes.txt': No such file or directory
 > > The `-i` option will prompt before (every) removal (use <kbd>Y</kbd> to confirm deletion or <kbd>N</kbd> to keep the file).
 > > The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
 > > By using the `-i` option, we have the chance to check that we are deleting only the files that we want to remove.
+> > Some systems have the `-i` option enabled by default. The COLA computers do not!
 > {: .solution}
 {: .challenge}
 
@@ -452,6 +456,7 @@ $ rm -r thesis
 
 Given that there is no way to retrieve files deleted using the shell,
 `rm -r` *should be used with great caution* (you might consider adding the interactive option `rm -r -i`).
+If a directory is empty, `rmdir` (the complement of `mkdir`) will also remove it.
 
 ## Operations with multiple files and directories
 
@@ -502,7 +507,7 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 
 > ## Wildcards
 >
-> `*` is a **wildcard**, which matches zero or more  characters.
+> `*` is a **wildcard**, which matches zero or more characters.
 > Let's consider the `data-shell/molecules` directory:
 > `*.pdb` matches `ethane.pdb`, `propane.pdb`, and every
 > file that ends with '.pdb'. On the other hand, `p*.pdb` only matches
@@ -528,6 +533,17 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 > file names matching these expressions, but not the wildcards
 > themselves. It is the shell, not the other programs, that deals with
 > expanding wildcards.
+> 
+> There are many other, fancier wildcards as well. For example:
+> 
+> `[0-9]` will match only numbers
+> 
+> `[a-Z]` will match any letters of either case. 
+> Unix alphabetizes as aAbBcCdD..zZ, so the mixed cases `a` and `Z` are necessary to include all the letters in the range.
+> 
+> `[[:lower:]]` will match only lower-case letters
+> 
+> `[[:upper:]]` will match only upper case letters
 {: .callout}
 
 > ## List filenames matching a pattern
