@@ -17,13 +17,13 @@ keypoints:
 ---
 ### Background
 
-Now that you have logged into the COLA computers, the computer is waiting for you to tell it what to do. In this class, we will also work on the NCAR supercomputer.  Both use the Unix shell to receive commands telling the computer what to do.  
+Now that you have logged into the COLA computers, the computer is waiting for you to tell it what to do. The Unix **shell** is used to receive commands telling the computer what to do. (Note: in the course, the name "Unix" is used, but everything said about "Unix" also applies to "Linux", which is an open-source implementation with many different versions. The COLA computer systems actually run a version of Linux called CentOS.)  
 
 ### The Shell
 
-The shell is a program where users can type commands.
-With the shell, it's possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code.
-The most popular Unix shell is Bash (the Bourne Again SHell --- so-called because it's derived from a shell written by Stephen Bourne).
+The shell is a program where users can type commands to interface with the computer.
+With the shell, it's possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory, often with only one line of code.
+The most popular Unix/Linux shell is **bash** (the Bourne Again SHell --- so-called because it's derived from a shell written by Stephen Bourne).
 Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.
 
 When the shell is first opened, you are presented with a **prompt**,
@@ -40,9 +40,9 @@ Most importantly:
 when typing commands, either from these lessons or from other sources,
 *do not type the prompt*, only the commands that follow it.
 
-Most of you (80%) indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. I have found in previous classes than many times students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do to run Earth System Models on a super computer.  Therefore, we will review some Unix basics here and you will review some additional helpful command on your own prior to next class.
+Many of you indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. Often students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do in this course.  Therefore, we will review some Unix basics here and you will review some additional helpful commands on your own prior to next class (note that the possibilities of what you can do with shell commands is practically limitless - feel free to read up, search the Internet and explore to learn more).
 
-`ls` means list the contents of the directory I am in
+`ls` means list the contents of the current directory (we will discuss files and directories in Week 2).
 ~~~
 $ ls
 ~~~
@@ -104,9 +104,14 @@ to use a command and what options it accepts:
     ~~~
     {: .language-bash}
 
-2. We can read its manual with `man`, such as:
+2. We can read its manual page with `man`, such as:
     ~~~
     $ man ls
     ~~~
     {: .language-bash}
 
+3. Alternatively, Linux systems and many Unix systems have a differently-formatted manual invoked with `info`, such as:
+    ~~~
+    $ info ls
+    ~~~
+    {: .language-bash}
