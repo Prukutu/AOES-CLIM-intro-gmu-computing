@@ -83,19 +83,20 @@ If this is the first time you have logged in, you will be required to change you
 
 > ## Password Requirements & Policies
 >
-> -Password complexity requirements will be provided in class.
->
-> -Keep your password secure and in a safe place.
->
-> -Do not share your password.
->
-> -No one will every ask you for your password.  If you ever get an email asking for your password DO NOT respond to it, it is a phishing attempt.
->
-> -Do not store your password on your laptop in plain text. 
->
-> -Passwords must be changed every 6-months
->
-> -Follow the Mason [Responsible Use of Technology Policies](https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+> * Password complexity
+>   * 12 characters minimum
+>   * Must contain characters from at least 3 of these 4 categories:
+>     * Lowercase letters
+>     * Uppercase letters
+>     * Numbers
+>     * Special characters (punctuation, symbols)
+>     
+> * Keep your password secure and in a safe place.
+> * Do not share your password.
+> * No one should ever ask you for your password.  If you ever get an email or other electronic message asking for your password DO NOT respond to it, it is a phishing attempt.
+> * Do not store your password on your laptop in plain text. 
+> * Passwords must be changed every 6-months. You will get an alert when it is time.
+> * Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
 {: .callout}
 
