@@ -46,7 +46,7 @@ The default Unix Shell for Linux operating systems is usually Bash. On most vers
 >
 > - Raise your hand when you need assistance or have a question
 >
-> - Indicate you are done with an activity in the colaborative document
+> - Indicate you are done with this activity
 >
 {: .callout}
 
