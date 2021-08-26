@@ -52,19 +52,11 @@ $ pwd
 > ## Home Directory Variation
 >
 > The home directory path will look different on different operating systems.
-> On Linux it may look like `/home/nelle`,
+> For marine biologist, Nelle Nemo, on Linux it may look like `/home/nelle`,
 > and on Windows it will be similar to `C:\Documents and Settings\nelle` or
 > `C:\Users\nelle`.
 > (Note that it may look slightly different for different versions of Windows.)
-> In future examples, we've used Mac output as the default - Linux and Windows
-> output may differ slightly but should be generally similar.
 {: .callout}
->  
-> We will also assume that your `pwd` command returns your users home directory. 
-> If `pwd` returns something different you may need to navigate there using `cd` 
-> or some commands in this lesson will not work as written. 
-> See [Exploring Other Directories](#exploring-other-directories) for more details 
-> on the `cd` command.
 
 To understand what a 'home directory' is,
 let's have a look at how the file system as a whole is organized.  For the
@@ -115,7 +107,7 @@ her colleagues *imhotep* and *larry*.
 The user *imhotep*'s files are stored in `/Users/imhotep`,
 user *larry*'s in `/Users/larry`,
 and Nelle's in `/Users/nelle`.  Because Nelle is the user in our
-examples here, therfore we get `/Users/nelle` as our home directory.
+examples here we get `/Users/nelle` as our home directory.
 Typically, when you open a new command prompt you will be in
 your home directory to start.
 
