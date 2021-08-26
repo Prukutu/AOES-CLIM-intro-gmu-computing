@@ -169,7 +169,7 @@ but we can let the shell do most of the work through what is called **tab comple
 If we type:
 
 ~~~
-$ cp /homes/dir
+$ cp /homes/dirm
 ~~~
 {: .language-bash}
 
