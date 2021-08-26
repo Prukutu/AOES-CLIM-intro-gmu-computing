@@ -1,7 +1,7 @@
 ---
 title: "Shell Commands"
-teaching: 0
-exercises: 0
+teaching: 5
+exercises: 5
 questions:
 - "How do I use the Unix shell?"
 objectives:
