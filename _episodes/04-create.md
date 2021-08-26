@@ -366,7 +366,7 @@ quotations.txt
 > > We start in the `/homes/jamie/data` directory, and create a new folder called `recombine`.
 > > The second line moves (`mv`) the file `proteins.dat` to the new folder (`recombine`).
 > > The third line makes a copy of the file we just moved.  The tricky part here is where the file was
-> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/homes.jamie`.
+> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/homes/jamie`.
 > > Notice that `..` is interpreted with respect to the current working
 > > directory, **not** with respect to the location of the file being copied.
 > > So, the only thing that will show using ls (in `/homes/jamie/data`) is the recombine folder.
