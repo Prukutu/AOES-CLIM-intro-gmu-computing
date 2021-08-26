@@ -49,6 +49,76 @@ $ pwd
 ~~~
 {: .language-bash}
 
+> ## Home Directory Variation
+>
+> The home directory path will look different on different operating systems.
+> On Linux it may look like `/home/nelle`,
+> and on Windows it will be similar to `C:\Documents and Settings\nelle` or
+> `C:\Users\nelle`.
+> (Note that it may look slightly different for different versions of Windows.)
+> In future examples, we've used Mac output as the default - Linux and Windows
+> output may differ slightly but should be generally similar.
+{: .callout}
+>  
+> We will also assume that your `pwd` command returns your users home directory. 
+> If `pwd` returns something different you may need to navigate there using `cd` 
+> or some commands in this lesson will not work as written. 
+> See [Exploring Other Directories](#exploring-other-directories) for more details 
+> on the `cd` command.
+
+To understand what a 'home directory' is,
+let's have a look at how the file system as a whole is organized.  For the
+sake of this example, we'll be
+illustrating the filesystem on our scientist Nelle's computer.  After this
+illustration, you'll be learning commands to explore your own filesystem,
+which will be constructed in a similar way, but not be exactly identical.
+
+On Nelle's computer, the filesystem looks like this:
+
+![The file system is made up of a root directory that contains sub-directories
+titled bin, data, users, and tmp](../fig/filesystem.svg)
+
+At the top is the **root directory**
+that holds everything else.
+We refer to it using a slash character, `/`, on its own;
+this is the leading slash in `/Users/nelle`.
+
+Inside that directory are several other directories:
+`bin` (which is where some built-in programs are stored),
+`data` (for miscellaneous data files),
+`Users` (where users' personal directories are located),
+`tmp` (for temporary files that don't need to be stored long-term),
+and so on.
+
+We know that our current working directory `/Users/nelle` is stored inside `/Users`
+because `/Users` is the first part of its name.
+Similarly,
+we know that `/Users` is stored inside the root directory `/`
+because its name begins with `/`.
+
+> ## Slashes
+>
+> Notice that there are two meanings for the `/` character.
+> When it appears at the front of a file or directory name,
+> it refers to the root directory. When it appears *inside* a path,
+> it's just a separator.
+{: .callout}
+
+Underneath `/Users`,
+we find one directory for each user with an account on Nelle's machine,
+her colleagues *imhotep* and *larry*.
+
+![Like other directories, home directories are sub-directories underneath 
+"/Users" like "/Users/imhotep", "/Users/larry" or 
+"/Users/nelle"](../fig/home-directories.svg)
+
+The user *imhotep*'s files are stored in `/Users/imhotep`,
+user *larry*'s in `/Users/larry`,
+and Nelle's in `/Users/nelle`.  Because Nelle is the user in our
+examples here, therfore we get `/Users/nelle` as our home directory.
+Typically, when you open a new command prompt you will be in
+your home directory to start.
+
 ### Moving around files and directories
 
 ~~~
