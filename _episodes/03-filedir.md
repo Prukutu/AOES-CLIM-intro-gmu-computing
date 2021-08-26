@@ -150,17 +150,17 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/pdirmeye
+/homes/dirmeyer
 ~~~
 {: .output}
 
 Let's get some data and examples to work with for this lesson:
 
-First, copy the file `/homes/pdirmeye/classes/fa2021/data-shell.zip` to your home directory
+First, copy the file `/homes/dirmeyer/classes/f2021/data-shell.zip` to your home directory
 
 ~~~
 $ cd
-$ cp /homes/pdirmeye/classes/fa2021/data-shell.zip .
+$ cp /homes/dirmeyer/classes/f2021/data-shell.zip .
 ~~~
 {: .language-bash}
 
@@ -169,7 +169,7 @@ but we can let the shell do most of the work through what is called **tab comple
 If we type:
 
 ~~~
-$ cp /homes/pdir
+$ cp /homes/dir
 ~~~
 {: .language-bash}
 
@@ -177,7 +177,7 @@ and then presses <kbd>Tab</kbd> (the tab key on your keyboard),
 the shell automatically completes the directory name:
 
 ~~~
-$ cp /homes/pdirmeye
+$ cp /homes/dirmeyer
 ~~~
 {: .language-bash}
 
