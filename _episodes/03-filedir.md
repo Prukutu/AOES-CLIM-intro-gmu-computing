@@ -230,7 +230,7 @@ $ pwd
 {: .output}
 
 ~~~
-$ cd /homes/pdirmeye/data-shell
+$ cd /homes/dirmeye/data-shell
 ~~~
 {: .language-bash}
 
