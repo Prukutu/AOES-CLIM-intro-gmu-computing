@@ -1,7 +1,7 @@
 ---
 title: "Logging into COLA Computers"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
 - "Why do I need to login to another computer?"
 - "How do I login to COLA computers?"
