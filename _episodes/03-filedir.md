@@ -164,7 +164,31 @@ $ cp /homes/pdirmeye/classes/fa2021/data-shell.zip .
 ~~~
 {: .language-bash}
 
-Unizp the file:
+This is a lot to type,
+but we can let the shell do most of the work through what is called **tab completion**.
+If we type:
+
+~~~
+$ cp /homes/pdir
+~~~
+{: .language-bash}
+
+and then presses <kbd>Tab</kbd> (the tab key on your keyboard),
+the shell automatically completes the directory name:
+
+~~~
+$ cp /homes/pdirmeye
+~~~
+{: .language-bash}
+
+Pressing <kbd>Tab</kbd> again does nothing,
+since there are several possibilities;
+pressing <kbd>Tab</kbd> twice brings up a list of all the files,
+and so on.
+This is called **tab completion**,
+and we will see it in many other tools as we go on.
+
+Next let's unzip the file:
 
 ~~~
 $ unzip data-shell.zip
