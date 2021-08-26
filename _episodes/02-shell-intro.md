@@ -65,10 +65,21 @@ $ ls -F /
 ~~~
 {: .language-bash}
 
-
 `ls` is the **command**, with an **option** `-F` (also called **switches** or **flags**) and an **argument** `/`.
 
-Unix commands have many **options** that are very useful.  Let's look at some for `ls`
+`ls` prints the names of the files and directories in the current directory.
+We make its output more comprehensible by using `-F` 
+which tells `ls` to classify the output
+by adding a marker to file and directory names to indicate what they are:
+- a trailing `/` indicates that this is a directory
+- `@` indicates a link
+- `*` indicates an executable
+
+Depending on your default options,
+the shell might also use colors to indicate whether each entry is a file or
+directory.
+
+Unix commands have many **options** that are very useful.  Let's look at some more for `ls`
 
 > ## Exploring More `ls` Flags
 >
