@@ -1,7 +1,7 @@
 ---
 title: "Working With Files and Directories"
 teaching: 20
-exercises: 10
+exercises: 5
 questions:
 - "How can I create, copy, and delete files and directories?"
 - "How can I edit files?"
@@ -35,7 +35,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/dirmeyer/data-shell
+/home/pdirmeye/data-shell
 ~~~
 {: .output}
 
@@ -78,7 +78,10 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 > ## Good names for files and directories
 >
 > Complicated names of files and directories can make your life painful
-> when working on the command line. Here we provide a few useful
+> when working on the command line. 
+> But extremely short and cryptic filenames will make your life painful when you return after days (weeks, months...) 
+> and try to remember what you were doing.
+> Here we provide a few useful
 > tips for the names of your files.
 >
 > 1. Don't use spaces.
@@ -89,7 +92,7 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 >    You can use `-` or `_` instead (e.g. `north-pacific-gyre/` rather than `north pacific gyre/`).
 >    
 >    You may encounter files with spaces in their names if they have been uploaded from a laptop.
->    To reference such files from the command line, enclose the entire name in quotes (`""`).
+>    To reference such files from the command line, enclose the entire name in quotes (`""` or `''`).
 >
 > 2. Don't begin the name with `-` (dash).
 >
@@ -130,7 +133,9 @@ $ ls -F thesis
 > > 2.  When you inspect the file with `ls -l`, note that the size of
 > >     `my_file.txt` is 0 bytes.  In other words, it contains no data.
 > >     If you open `my_file.txt` using your text editor it is blank.
-> >
+> >      
+> > 3.  `touch`ing an existing file does not change it, but will update the date/time of its last edit to the current date/time. 
+> > 
 > {: .solution}
 {: .challenge}
 
@@ -265,7 +270,7 @@ quotes.txt
 The `cp` command works very much like `mv`,
 except it copies a file instead of moving it.
 We can check that it did the right thing using `ls`
-with two paths as arguments --- like most Unix commands,
+with two paths as arguments --- like most Unix/Linux commands,
 `ls` can be given multiple paths at once:
 
 ~~~
@@ -338,7 +343,7 @@ quotations.txt
 > ~~~
 > {: .language-bash}
 > ~~~
-> /homes/jamie/data
+> /home/jamie/data
 > ~~~
 > {: .output}
 > ~~~
@@ -363,18 +368,18 @@ quotations.txt
 > 4.   `proteins-saved.dat`
 >
 > > ## Solution
-> > We start in the `/homes/jamie/data` directory, and create a new folder called `recombine`.
+> > We start in the `/home/jamie/data` directory, and create a new folder called `recombine`.
 > > The second line moves (`mv`) the file `proteins.dat` to the new folder (`recombine`).
 > > The third line makes a copy of the file we just moved.  The tricky part here is where the file was
-> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/homes/jamie`.
+> > copied to.  Recall that `..` means 'go up a level', so the copied file is now in `/home/jamie`.
 > > Notice that `..` is interpreted with respect to the current working
 > > directory, **not** with respect to the location of the file being copied.
-> > So, the only thing that will show using ls (in `/homes/jamie/data`) is the recombine folder.
+> > So, the only thing that will show using ls (in `/home/jamie/data`) is the recombine folder.
 > >
-> > 1. No, see explanation above.  `proteins-saved.dat` is located at `/homes/jamie`
+> > 1. No, see explanation above.  `proteins-saved.dat` is located at `/home/jamie`
 > > 2. Yes
-> > 3. No, see explanation above.  `proteins.dat` is located at `/homes/jamie/data/recombine`
-> > 4. No, see explanation above.  `proteins-saved.dat` is located at `/homes/jamie`
+> > 3. No, see explanation above.  `proteins.dat` is located at `/home/jamie/data/recombine`
+> > 4. No, see explanation above.  `proteins-saved.dat` is located at `/home/jamie`
 > {: .solution}
 {: .challenge}
 
@@ -382,7 +387,7 @@ quotations.txt
 
 Returning to the `data-shell` directory,
 let's tidy up this directory by removing the `quotes.txt` file we created.
-The Unix command we'll use for this is `rm` (short for 'remove'):
+The command we'll use for this is `rm` (short for 'remove'):
 
 ~~~
 $ rm quotes.txt
@@ -403,12 +408,14 @@ ls: cannot access 'quotes.txt': No such file or directory
 
 > ## Deleting Is Forever
 >
-> The Unix shell doesn't have a trash bin that we can recover deleted
-> files from (though most graphical interfaces to Unix do).  Instead,
+> Shells don't have a trash bin that we can recover deleted
+> files from (though most graphical interfaces to Unix do - but interestingly, 
+> the one on HOPPER does not. But if you try to delete a file in HOPPER's GUI, it will 
+> ask you if you are sure).  Instead,
 > when we delete files, they are unlinked from the file system so that
 > their storage space on disk can be recycled. Tools for finding and
 > recovering deleted files do exist, but there's no guarantee they'll
-> work in any particular situation, since the computer may recycle the
+> work in any particular situation, since the computer may reuse the
 > file's disk space right away.
 {: .callout}
 
@@ -424,9 +431,9 @@ ls: cannot access 'quotes.txt': No such file or directory
 > > ```
 > > {: .language-bash}
 > > The `-i` option will prompt before (every) removal (use <kbd>Y</kbd> to confirm deletion or <kbd>N</kbd> to keep the file).
-> > The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
+> > The shell doesn't have a trash bin, so all the files removed will disappear forever.
 > > By using the `-i` option, we have the chance to check that we are deleting only the files that we want to remove.
-> > Some systems have the `-i` option enabled by default. The COLA computers do not!
+> > Some systems have the `-i` option enabled by default. HOPPER accessed via a `ssh` terminal does not!
 > {: .solution}
 {: .challenge}
 
@@ -444,7 +451,7 @@ rm: cannot remove `thesis': Is a directory
 ~~~
 {: .error}
 
-This happens because `rm` by default only works on files, not directories.
+This happens because `rm` *by default* only works on files, not directories.
 
 `rm` can remove a directory *and all its contents* if we use the
 recursive option `-r`, and it will do so *without any confirmation prompts*:
@@ -455,12 +462,13 @@ $ rm -r thesis
 {: .language-bash}
 
 Given that there is no way to retrieve files deleted using the shell,
-`rm -r` *should be used with great caution* (you might consider adding the interactive option `rm -r -i`).
+`rm -r` *should be used with extreme caution* (you might consider adding the interactive option `rm -r -i`).
+
 If a directory is empty, `rmdir` (the complement of `mkdir`) will also remove it.
 
 ## Operations with multiple files and directories
 
-Oftentimes one needs to copy or move several files at once. This can be done by providing a list of individual filenames, or specifying a naming pattern using wildcards.
+Oftent one needs to copy or move several files at once. This can be done by providing a list of individual filenames, or specifying a naming pattern using *wildcards*.
 
 > ## Copy with Multiple Filenames
 >
@@ -539,7 +547,7 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 > `[0-9]` will match only numbers
 > 
 > `[a-Z]` will match any letters of either case. 
-> Unix alphabetizes as aAbBcCdD..zZ, so the mixed cases `a` and `Z` are necessary to include all the letters in the range.
+> Unix/Linux alphabetizes as aAbBcCdD..zZ, so the mixed cases `a` and `Z` are necessary to include all the letters in the range.
 > 
 > `[[:lower:]]` will match only lower-case letters
 > 
@@ -761,6 +769,7 @@ Oftentimes one needs to copy or move several files at once. This can be done by 
 > $ mkdir raw processed
 > ~~~
 > {: .language-bash}
+> 
 > >
 > > ## Solution
 > > The first two sets of commands achieve this objective.
