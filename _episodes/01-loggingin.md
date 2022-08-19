@@ -1,6 +1,6 @@
 ---
 title: "Logging into GMU (ORC) Computing"
-teaching: 20
+teaching: 15
 exercises: 5
 questions:
 - "Why do I need to login to another computer?"
@@ -58,6 +58,8 @@ If you do not already have an ORC account, please see the [new user information]
     * There is an option to be notified by email when your session becomes available. For such a small request, your session is typically ready after only a few seconds - it is not necessary to request email notification unless you are making a very large request (many nodes) for which resources may not be immediately available.
 3. A new browser tab will open and present you with a virtual Linux desktop. Click on the "terminal emulator" icon at the bottom to launch a session in a terminal window. Your session will start in your home directory on HOPPER.  
 
+
+### Connecting to HOPPER via `ssh`
 
 As an alternative to the HOPPER desktop, you may access HOPPER via a terminal window on your laptop running secure shell (ssh) software. The software differs based on what type of computer you have. 
 
