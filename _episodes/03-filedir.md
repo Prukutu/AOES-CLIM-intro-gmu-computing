@@ -1,7 +1,7 @@
 ---
 title: "Navigating Files and Directories"
 teaching: 15
-exercises: 10
+exercises: 5
 questions:
 - "How can I move around the file system on the computer?"
 - "How can I see what files and directories I have?"
@@ -22,7 +22,7 @@ keypoints:
 - "`/` on its own is the root directory of the whole file system."
 - "A relative path specifies a location starting from the current location."
 - "An absolute path specifies a location from the root of the file system."
-- "Directory names in a path are separated with `/` on Unix, but `\\` on Windows."
+- "Directory names in a path are separated with `/` on Unix/Linux and Mac OS, but `\\` on Windows."
 - "`..` means 'the directory above the current one'; `.` on its own means 'the current directory'."
 ---
 
@@ -32,7 +32,7 @@ It organizes our data into files,
 which hold information,
 and directories (also called 'folders'),
 which hold files or other directories.
-You are probably familiar with this idea from your own laptop. It works very similarly on Unix systems.
+You are probably familiar with this idea from your own laptop. It works very similarly on HOPPER and other Linux/Unix systems.
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
 To start exploring them, we'll go to our open shell window.
@@ -52,10 +52,12 @@ $ pwd
 > ## Home Directory Variation
 >
 > The home directory path will look different on different operating systems.
-> For marine biologist, Nelle Nemo, on Linux it may look like `/home/nelle`,
+> For ficticious student Nelle Nematode, on Linux it may look like `/home/nelle` 
+> (or if she's at GMU: `/home/nnematod`),
 > and on Windows it will be similar to `C:\Documents and Settings\nelle` or
-> `C:\Users\nelle`.
+> `C:\Users\nelle`
 > (Note that it may look slightly different for different versions of Windows.)
+> Meanwhile, on MacOS: `/Users/nelle`.
 {: .callout}
 
 To understand what a 'home directory' is,
@@ -150,17 +152,17 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/dirmeyer
+/home/pdirmeye
 ~~~
 {: .output}
 
 Let's get some data and examples to work with for this lesson:
 
-First, copy the file `/homes/dirmeyer/classes/f2021/data-shell.zip` to your home directory
+First, copy the file `/home/pdirmeye/classes/clim680_2022/data-shell.zip` to your home directory
 
 ~~~
 $ cd
-$ cp /homes/dirmeyer/classes/f2021/data-shell.zip .
+$ cp /home/pdirmeye/classes/clim680_2022/data-shell.zip .
 ~~~
 {: .language-bash}
 
@@ -169,7 +171,7 @@ but we can let the shell do most of the work through what is called **tab comple
 If we type:
 
 ~~~
-$ cp /homes/dirm
+$ cp /home/pdi
 ~~~
 {: .language-bash}
 
@@ -177,18 +179,18 @@ and then presses <kbd>Tab</kbd> (the tab key on your keyboard),
 the shell automatically completes the directory name:
 
 ~~~
-$ cp /homes/dirmeyer
+$ cp /home/pdirmeye/
 ~~~
 {: .language-bash}
 
 Pressing <kbd>Tab</kbd> again does nothing,
-since there are several possibilities;
-pressing <kbd>Tab</kbd> twice brings up a list of all the files,
+because there are several possibilities;
+pressing <kbd>Tab</kbd> twice brings up a list of all the options,
 and so on.
 This is called **tab completion**,
 and we will see it in many other tools as we go on.
 
-Next let's unzip the file:
+Once you have copied the file to your home directory, let's unzip it:
 
 ~~~
 $ unzip data-shell.zip
@@ -225,12 +227,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/homes/pdirmeye/data-shell/data
+/home/pdirmeye/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /homes/dirmeye/data-shell
+$ cd /home/pdirmeye/data-shell
 ~~~
 {: .language-bash}
 
@@ -240,9 +242,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/homes/nelle`, then `~/data` is equivalent to
-> `/homes/nelle/data`. This only works if it is the first character in the
-> path: `here/there/~/elsewhere` is *not* `here/there/homes/nelle/elsewhere`.
+> directory is `/home/nelle`, then `~/data` is equivalent to
+> `/home/nelle/data`. This only works if it is the first character in the
+> path: `here/there/~/elsewhere` is *not* `here/there/home/nelle/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
 > *the previous directory I was in*, which is faster than having to remember,
@@ -254,13 +256,13 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
 > ## Absolute vs Relative Paths
 >
-> Starting from `/homes/amanda/data`,
+> Starting from `/home/amanda/data`,
 > which of the following commands could Amanda use to navigate to her home directory,
-> which is `/homes/amanda`?
+> which is `/home/amanda`?
 >
 > 1. `cd .`
 > 2. `cd /`
-> 3. `cd /homes/amanda`
+> 3. `cd /home/amanda`
 > 4. `cd ../..`
 > 5. `cd ~`
 > 6. `cd home`
@@ -271,10 +273,10 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > ## Solution
 > > 1. No: `.` stands for the current directory.
 > > 2. No: `/` stands for the root directory.
-> > 3. Yes: Amanda's home directory is `/homes/amanda`.
-> > 4. No: this goes up two levels, i.e. ends in `/homes`.
-> > 5. Yes: `~` stands for the user's home directory, in this case `/homes/amanda`.
-> > 6. No: this would navigate into a directory `homes` in the current directory if it exists.
+> > 3. Yes: Amanda's home directory is `/home/amanda`.
+> > 4. No: this goes up two levels, i.e. ends in `/home`.
+> > 5. Yes: `~` stands for the user's home directory, in this case `/home/amanda`.
+> > 6. No: this would navigate into a directory `home` in the current directory if it exists.
 > > 7. Yes: unnecessarily complicated, but correct.
 > > 8. Yes: shortcut to go back to the user's home directory.
 > > 9. Yes: goes up one level.
