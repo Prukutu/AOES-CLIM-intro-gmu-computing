@@ -1,9 +1,9 @@
 ---
 title: "Shell Commands"
-teaching: 5
+teaching: 10
 exercises: 5
 questions:
-- "How do I use the Unix shell?"
+- "How do I use the `bash` shell?"
 objectives:
 - "Introduce Unix Commands, switches, and how to get more info"
 keypoints:
@@ -11,13 +11,13 @@ keypoints:
 - "Identify the actual command, options, and filenames in a command-line call."
 - "Highlight some switches that will be particularly useful."
 keypoints:
-- "Unix commands consist of the command, options or switches, and input to the command"
-- "Additional switches can be found using `man`, `info` or `--help`"
+- "Most commands consist of the command, options or switches, and input to the command"
+- "Additional switches can be found using `info` or `--help`"
 
 ---
 ### Background
 
-Now that you have logged into the COLA computers, the computer is waiting for you to tell it what to do.
+Now that you have logged into HOPPER, the computer is waiting for you to tell it what to do.
 
 Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a **graphical user interface** (GUI).
 With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.
@@ -25,21 +25,22 @@ With a GUI, we give instructions by clicking a mouse and using menu-driven inter
 While the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly.
 Imagine the following task:
 for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file.
-Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell.
+Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the power of a computing *shells*.
 
-The Unix **shell** is used to receive commands telling the computer what to do. (Note: in the course, the name "Unix" is used, but everything said about "Unix" also applies to "Linux", which is an open-source implementation with many different versions. The COLA computer systems actually run a version of Linux called CentOS.) The Unix shell is both a **command-line interface** (CLI) and a scripting language, allowing repetitive tasks to be done automatically and fast.
+The **shell** is used to receive commands telling the computer what to do. The shell is both a **command-line interface** (CLI) and a basic scripting language, allowing repetitive tasks to be done automatically and fast.
 With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.
-Using the shell, the task in the literature example can be accomplished in seconds.
+Using the shell, the task in the literature example above could be accomplished in a second.
 
 ### The Shell
 
-The shell is a program where users can type commands to interface with the computer.
+The shell is actually just (another) program where users can type commands to interface with the computer.
 With the shell, it's possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory, often with only one line of code.
-The most popular Unix/Linux shell is **bash** (the Bourne Again SHell --- so-called because it's derived from a shell written by Stephen Bourne).
-Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.
+There have been many shells created over the years. The very first, as part of the original Unix operating system in the early 1970s, is `sh` which stands for... "shell"! 
+One of the most popular shells is **bash** (the Bourne Again SHell --- so-called because it's derived from a shell, that was also named `sh`, written by Stephen Bourne in the late 1970s). `bash` was written in the late 1980s, and has stood the test of time. 
+It is the default shell on most modern implementations of Unix/Linux and in most packages that provide Unix-like tools for Windows.
 
 When the shell is first opened, you are presented with a **prompt**,
-indicating that the shell is waiting for input.
+indicating that the shell is waiting for input:
 
 ~~~
 $
@@ -52,7 +53,7 @@ Most importantly:
 when typing commands, either from these lessons or from other sources,
 *do not type the prompt*, only the commands that follow it.
 
-Many of you indicated in the Pre-Course Survey that you use the Unix shell daily or weekly. Often students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do in this course.  Therefore, we will review some Unix basics here and you will review some additional helpful commands on your own prior to next class (note that the possibilities of what you can do with shell commands is practically limitless - feel free to read up, search the Internet and explore to learn more).
+Many of you indicated in the Pre-Course Survey that you use the Unix/Linux shell daily or weekly. Often students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do in this course.  Therefore, we will review some Unix basics here and you will review some additional helpful commands on your own prior to next class (note that the possibilities of what you can do with shell commands is practically limitless - feel free to read up, search the Internet and explore to learn more).
 
 `ls` means list the contents of the current directory.
 ~~~
@@ -127,13 +128,13 @@ to use a command and what options it accepts:
     ~~~
     {: .language-bash}
 
-2. We can read its manual page with `man`, such as:
+2. Many systems (but not HOPPER) allow viewing of a command's manual page with `man`, such as:
     ~~~
     $ man ls
     ~~~
     {: .language-bash}
 
-3. Alternatively, Linux systems and many Unix systems have a differently-formatted manual invoked with `info`, such as:
+3. More modern than `man`, Linux systems and many Unix systems have a differently-formatted manual invoked with the command `info`, such as:
     ~~~
     $ info ls
     ~~~
