@@ -108,7 +108,7 @@ If this is the first time you have logged in, you will be required to change you
 > * No one should ever ask you for your password.  If you ever get an email or other electronic message asking for your password DO NOT respond to it, it is a phishing attempt.
 > * Do not store your password on your laptop in plain text. 
 > * Passwords must be changed every 6-months. You will get an alert from the university when the time is approaching.
-> * Follow the Mason [Responsible Use of Technology Policies] (https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+> * Follow the Mason [Responsible Use of Technology Policies](https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
 >
 {: .callout}
 
