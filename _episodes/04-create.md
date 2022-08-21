@@ -4,7 +4,6 @@ teaching: 15
 exercises: 5
 questions:
 - "How can I create, copy, and delete files and directories?"
-- "How can I edit files?"
 objectives:
 - "Create a directory hierarchy that matches a given diagram."
 - "Create files in that hierarchy using an editor or by copying and renaming existing files."
@@ -19,7 +18,6 @@ keypoints:
 - "Use of the Control key may be notated in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
 - "The shell does not have a trash bin: once something is deleted, it's really gone. REALLY!"
 - "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
-- "Depending on the type of work you do, you may need a more powerful text editor than Nano."
 ---
 ## Creating directories
 We now know how to explore files and directories,
