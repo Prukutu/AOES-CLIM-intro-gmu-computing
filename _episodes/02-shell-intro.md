@@ -125,24 +125,24 @@ to use a command and what options it accepts:
 
 1. We can pass a `--help` option to the command, such as: 
 
-    ~~~
-    $ ls --help
-    ~~~
-    {: .language-bash}
+~~~
+$ ls --help
+~~~
+{: .language-bash}
 
 2. Many systems (but not HOPPER) allow viewing of a command's manual page with `man`, such as:
 
-    ~~~
-    $ man ls
-    ~~~
-    {: .language-bash}
+~~~
+$ man ls
+~~~
+{: .language-bash}
 
 3. More modern than `man`, Linux systems and many Unix systems have a differently-formatted manual invoked with the command `info`, such as:
 
-    ~~~
-    $ info ls
-    ~~~
-    {: .language-bash}
+~~~
+$ info ls
+~~~
+{: .language-bash}
 
 ### More about options in Unix commands
 
