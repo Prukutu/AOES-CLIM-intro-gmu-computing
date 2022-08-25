@@ -42,7 +42,7 @@ We will use HOPPER in this class.
 There are several ways to connect to HOPPER. By far the easiest is via the [Dashboard in your browser](https://ondemand.orc.gmu.edu/pun/sys/dashboard){:target="_blank" rel="noopener"}. This requires no special software installation or setup on your laptop. There are a number of commonly-requested apps provided from the dashboard, and a link to a more complete list of apps. In this course, we will be using two of the options listed:
 
 1. The HOPPER Desktop - a Linux GUI OS interface to HOPPER, and
-2. Jupyter Lab - an interface to create and run Python notebooks on HOPPER
+2. Jupyter Lab - an interface to create and run Python notebooks on HOPPER 
 
 As with all things GMU, you will have to log in with your Mason ID and password. If you have your browser setup properly, you will only have to do this every 14 days (all secure GMU pages including the ORC Dashboard should recognize the same authentication). 
 
