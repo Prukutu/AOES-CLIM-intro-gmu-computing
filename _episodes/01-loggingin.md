@@ -65,8 +65,10 @@ As an alternative to the HOPPER desktop, you may access HOPPER via a terminal wi
 
 #### Mac OS
 For a Mac computer, use software called [Xquartz](https://www.xquartz.org/){:target="_blank" rel="noopener"}, which takes advantage of the fact that Mac OS is built on top of Unix.
+
 #### Windows
 For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/){:target="_blank" rel="noopener"}.
+
 #### Linux
 The default Shell for Linux operating systems is usually `bash`. On most versions of Linux, it is accessible by running the (Gnome) Terminal or (KDE) Konsole or `xterm`, which can be found via the applications menu or the search bar. If your machine is set up to use something other than `bash`, you can run it by opening a terminal session and typing `bash`.
 
