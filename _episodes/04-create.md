@@ -290,25 +290,25 @@ We can also copy a directory and all its contents by using the
 [recursive](https://en.wikipedia.org/wiki/Recursion) option `-r`,
 e.g. to back up a directory:
 
-```
+~~~
 $ cp -r thesis thesis_backup
-```
+~~~
 {: .language-bash}
 
 We can check the result by listing the contents of both the `thesis` and `thesis_backup` directory:
 
-```
+~~~
 $ ls thesis thesis_backup
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 thesis:
 quotations.txt
 
 thesis_backup:
 quotations.txt
-```
+~~~
 {: .output}
 
 
@@ -512,9 +512,9 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > > If given three file names, `cp` throws an error such as the one below, because it is expecting a directory
 > > name as the last argument.
 > >
-> > ```
+> > ~~~
 > > cp: target ‘morse.txt’ is not a directory
-> > ```
+> > ~~~
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -593,7 +593,7 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > the datasets:
 >
 > ~~~
-> .
+> .   
 > ├── 2015-10-23-calibration.txt
 > ├── 2015-10-23-dataset1.txt
 > ├── 2015-10-23-dataset2.txt
@@ -630,7 +630,8 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > Help Sam by filling in the blanks.
 >
 > The resulting directory structure should look like this
-> ```
+> 
+> ~~~
 > .
 > ├── 2015-10-23-calibration.txt
 > ├── 2015-10-23-dataset1.txt
@@ -672,15 +673,16 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 >         ├── 2015-11-23-dataset1.txt
 >         ├── 2015-11-23-dataset2.txt
 >         └── 2015-11-23-dataset_overview.txt
-> ```
+> ~~~
 > {: .language-bash}
 >
 > > ## Solution
-> > ```
+> > 
+> > ~~~
 > > $ cp *calibration.txt backup/calibration
 > > $ cp 2015-11-* send_to_bob/all_november_files/
 > > $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
-> > ```
+> > ~~~
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
@@ -725,10 +727,12 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > {: .output}
 >
 > > ## Solution
-> > ```
+> > 
+> > ~~~
 > > mv *.dat analyzed
-> > ```
+> > ~~~
 > > {: .language-bash}
+> > 
 > > Jamie needs to move her files `fructose.dat` and `sucrose.dat` to the `analyzed` directory.
 > > The shell will expand *.dat to match all .dat files in the current directory.
 > > The `mv` command then moves the list of .dat files to the 'analyzed' directory.
