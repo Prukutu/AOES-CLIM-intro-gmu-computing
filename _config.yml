@@ -9,6 +9,10 @@
 # cp: Carpentries (to use for instructor traning for instance)
 carpentry: "swc"
 
+# Attempt to allow links to open in new tabs with:  {:target="_blank" rel="noopener"}
+kramdown:
+  input: Kramdown
+
 # Overall title for pages.
 title: "Intro to GMU Computing"
 
