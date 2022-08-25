@@ -39,7 +39,7 @@ We will use HOPPER in this class.
 
 ### Setting up Software for your computer
 
-There are several ways to connect to HOPPER. By far the easiest is via the [Dashboard in your browser](https://ondemand.orc.gmu.edu/pun/sys/dashboard). This requires no special software installation or setup on your laptop. There are a number of commonly-requested apps provided from the dashboard, and a link to a more complete list of apps. In this course, we will be using two of the options listed:
+There are several ways to connect to HOPPER. By far the easiest is via the [Dashboard in your browser](https://ondemand.orc.gmu.edu/pun/sys/dashboard){:target="_blank" rel="noopener"}. This requires no special software installation or setup on your laptop. There are a number of commonly-requested apps provided from the dashboard, and a link to a more complete list of apps. In this course, we will be using two of the options listed:
 
 1. The HOPPER Desktop - a Linux GUI OS interface to HOPPER, and
 2. Jupyter Lab - an interface to create and run Python notebooks on HOPPER
@@ -49,7 +49,7 @@ As with all things GMU, you will have to log in with your Mason ID and password.
 
 ### Connecting to HOPPER via the Dashboard
 
-If you do not already have an ORC account, please see the [new user information](https://orc.gmu.edu/new-user-information/). The pre-course survey should have informed us whether you already have an account.
+If you do not already have an ORC account, please see the [new user information](https://orc.gmu.edu/new-user-information/){:target="_blank" rel="noopener"}. The pre-course survey should have informed us whether you already have an account.
 
 1. Click on the "HOPPER Desktop option".
 2. You will be moved to a page called "Interactive Sessions" and given options to launch an interactive desktop session.
@@ -64,9 +64,9 @@ If you do not already have an ORC account, please see the [new user information]
 As an alternative to the HOPPER desktop, you may access HOPPER via a terminal window on your laptop running secure shell (ssh) software. The software differs based on what type of computer you have. 
 
 #### Mac OS
-For a Mac computer, use software called [Xquartz](https://www.xquartz.org/), which takes advantage of the fact that Mac OS is built on top of Unix.
+For a Mac computer, use software called [Xquartz](https://www.xquartz.org/){:target="_blank" rel="noopener"}, which takes advantage of the fact that Mac OS is built on top of Unix.
 #### Windows
-For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/).
+For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/){:target="_blank" rel="noopener"}.
 #### Linux
 The default Shell for Linux operating systems is usually `bash`. On most versions of Linux, it is accessible by running the (Gnome) Terminal or (KDE) Konsole or `xterm`, which can be found via the applications menu or the search bar. If your machine is set up to use something other than `bash`, you can run it by opening a terminal session and typing `bash`.
 
@@ -110,7 +110,7 @@ If this is the first time you have logged in, you will be required to change you
 > * No one should ever ask you for your password.  If you ever get an email or other electronic message asking for your password DO NOT respond to it, it is a phishing attempt.
 > * Do not store your password on your laptop in plain text. 
 > * Passwords must be changed every 6-months. You will get an alert from the university when the time is approaching.
-> * Follow the Mason [Responsible Use of Technology Policies](https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/)
+> * Follow the Mason [Responsible Use of Technology Policies](https://universitypolicy.gmu.edu/policies/responsible-use-of-computing/){:target="_blank" rel="noopener"}
 >
 {: .callout}
 
