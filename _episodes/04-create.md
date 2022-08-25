@@ -138,6 +138,7 @@ $ ls -F thesis
 {: .challenge}
 
 ## Moving files and directories
+
 Returning to the `data-shell` directory,
 
 ```
@@ -146,12 +147,14 @@ cd ~/data-shell/
 {: .language-bash}
 
 Let's create a file called `draft.txt` in our `thesis` directory using a text editor:
+
 ```
 $ vi thesis/draft.txt
 ```
 {: .language-bash}
 
 Let's type a few lines.  First, type the `i` character (this stands for insert)
+
 ```
 It's not "publish or perish" any more,
 it's "share and thrive"
@@ -253,6 +256,7 @@ quotes.txt
 > $ mv sucrose.dat maltose.dat ____/____
 > ~~~
 > {: .language-bash}
+> 
 > > ## Solution
 > > ```
 > > $ mv sucrose.dat maltose.dat ../raw
@@ -340,18 +344,22 @@ quotations.txt
 > $ pwd
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > /home/jamie/data
 > ~~~
 > {: .output}
+> 
 > ~~~
 > $ ls
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > proteins.dat
 > ~~~
 > {: .output}
+> 
 > ~~~
 > $ mkdir recombine
 > $ mv proteins.dat recombine/
@@ -486,10 +494,12 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > $ ls -F
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > amino-acids.txt  animals.txt  backup/  elements/  morse.txt  pdb/  planets.txt  salmon.txt  sunspot.txt
 > ~~~
 > {: .output}
+> 
 > ~~~
 > $ cp amino-acids.txt animals.txt morse.txt
 > ~~~
@@ -684,6 +694,7 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > $ ls -F
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > analyzed/  fructose.dat    raw/   sucrose.dat
 > ~~~
@@ -697,14 +708,17 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > $ ls -F
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > analyzed/   raw/
 > ~~~
 > {: .output}
+> 
 > ~~~
 > $ ls analyzed
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > fructose.dat    sucrose.dat
 > ~~~
@@ -747,6 +761,7 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > $ mkdir 2016-05-20/data/raw
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20
 > $ cd 2016-05-20
@@ -755,11 +770,13 @@ Oftent one needs to copy or move several files at once. This can be done by prov
 > $ mkdir raw processed
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20/data/raw
 > $ mkdir 2016-05-20/data/processed
 > ~~~
 > {: .language-bash}
+> 
 > ~~~
 > $ mkdir 2016-05-20
 > $ cd 2016-05-20
