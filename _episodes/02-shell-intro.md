@@ -56,6 +56,7 @@ when typing commands, either from these lessons or from other sources,
 Many of you indicated in the Pre-Course Survey that you use the Unix/Linux shell daily or weekly. Often students know a small set of basic commands, but very few useful options or switches and are not familiar with commands that can greatly help your work and the work we will need to do in this course.  Therefore, we will review some Unix basics here and you will review some additional helpful commands on your own prior to next class (note that the possibilities of what you can do with shell commands is practically limitless - feel free to read up, search the Internet and explore to learn more).
 
 `ls` means list the contents of the current directory.
+
 ~~~
 $ ls
 ~~~
@@ -122,19 +123,22 @@ Unix commands have many **options** that are very useful.  Let's look at some mo
 `ls` has lots of other **options**. There are two common ways to find out how
 to use a command and what options it accepts:
 
-1. We can pass a `--help` option to the command, such as:
+1. We can pass a `--help` option to the command, such as: 
+
     ~~~
     $ ls --help
     ~~~
     {: .language-bash}
 
 2. Many systems (but not HOPPER) allow viewing of a command's manual page with `man`, such as:
+
     ~~~
     $ man ls
     ~~~
     {: .language-bash}
 
 3. More modern than `man`, Linux systems and many Unix systems have a differently-formatted manual invoked with the command `info`, such as:
+
     ~~~
     $ info ls
     ~~~
