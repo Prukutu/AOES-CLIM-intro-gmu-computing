@@ -199,6 +199,7 @@ $ unzip data-shell.zip
 
 
 Let's go explore the directories we copied:
+
 ~~~
 $ cd data-shell/data
 ~~~
