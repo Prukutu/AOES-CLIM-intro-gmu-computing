@@ -152,17 +152,17 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/home/pdirmeye
+/home/lortizur
 ~~~
 {: .output}
 
 Let's get some data and examples to work with for this lesson:
 
-First, copy the file `/home/pdirmeye/classes/clim680_2022/data-shell.zip` to your home directory
+First, copy the file `/home/lortizur/classes/clim680_2022/data-shell.zip` to your home directory
 
 ~~~
 $ cd
-$ cp /home/pdirmeye/classes/clim680_2022/data-shell.zip .
+$ cp /home/lortizur/classes/clim680_2022/data-shell.zip .
 ~~~
 {: .language-bash}
 
@@ -179,7 +179,7 @@ and then presses <kbd>Tab</kbd> (the tab key on your keyboard),
 the shell automatically completes the directory name:
 
 ~~~
-$ cp /home/pdirmeye/
+$ cp /home/lortizur/
 ~~~
 {: .language-bash}
 
@@ -228,12 +228,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/home/pdirmeye/data-shell/data
+/home/lortizur/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /home/pdirmeye/data-shell
+$ cd /home/lortizur/data-shell
 ~~~
 {: .language-bash}
 
