@@ -33,7 +33,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/home/pdirmeye/data-shell
+/home/lortizur/data-shell
 ~~~
 {: .output}
 
