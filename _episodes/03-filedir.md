@@ -171,7 +171,7 @@ but we can let the shell do most of the work through what is called **tab comple
 If we type:
 
 ~~~
-$ cp /home/pdi
+$ cp /home/lor
 ~~~
 {: .language-bash}
 
