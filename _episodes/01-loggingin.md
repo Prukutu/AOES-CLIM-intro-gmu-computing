@@ -31,43 +31,35 @@ Linux/Unix computers use a command line interface that allow us to automate our 
 
 The GMU Office of Research Computing maintains two separate clusters:
 
-1. The HOPPER Cluster is ORC’s primary compute cluster, which provides support for both batch jobs via Slurm and interactive computing.  The cluster includes: 74 compute nodes each with 192 GB of memory, and two GPU nodes each with 1 TB of memory.
-2. The ARGO Cluster is a ~2000 core Linux cluster also providing a scheduled job environment using Slurm.  There are a number of different node configurations on ARGO ranging from 16 cores to 32 cores per node.  Each node provides a minimum of 4 GB/core, however it has some nodes with 512 GB of RAM and one node with 1.5 TB of RAM. Additionally there are also several kinds of GPU nodes. 
+1. Hopper is a powerful cluster with over 10,000+ cores, including A100 80GB GPUs and DGX A100 40GB GPUsIt.
+2. Argo is a 1500+ CPU core batch-processing cluster based on the condo model. 
 
 We will use HOPPER in this class.  
 
 
 ### Setting up Software for your computer
 
-There are several ways to connect to HOPPER. By far the easiest is via the [Dashboard in your browser](https://ondemand.orc.gmu.edu/pun/sys/dashboard){:target="_blank" rel="noopener"}. This requires no special software installation or setup on your laptop. There are a number of commonly-requested apps provided from the dashboard, and a link to a more complete list of apps. In this course, we will be using two of the options listed:
+There are several ways to connect to HOPPER. By far the easiest is via the [Dashboard in your browser](https://ondemand.orc.gmu.edu){:target="_blank" rel="noopener"}. This requires no special software installation or setup on your laptop. There are a number of commonly-requested apps provided from the dashboard, and a link to a more complete list of apps. 
+1. Jupyter Lab - an interface to create and run Python notebooks on HOPPER
+2. VS Code Server - A general integrated development environment that can run Jupyter Notebooks and provide advanced coding features
 
-1. The HOPPER Desktop - a Linux GUI OS interface to HOPPER, and
-2. Jupyter Lab - an interface to create and run Python notebooks on HOPPER 
+As with all things GMU, you will have to log in with your Mason ID and password. If you have your browser setup properly, you will only have to do this every 14 days (all secure GMU pages including the ORC Dashboard should recognize the same authentication). If you do not already have an ORC account, please see the [new user information](https://orc.gmu.edu/new-user-information/){:target="_blank" rel="noopener"}. The pre-course survey should have informed us whether you already have an account.
 
-As with all things GMU, you will have to log in with your Mason ID and password. If you have your browser setup properly, you will only have to do this every 14 days (all secure GMU pages including the ORC Dashboard should recognize the same authentication). 
 
 
 ### Connecting to HOPPER via the Dashboard
 
-If you do not already have an ORC account, please see the [new user information](https://orc.gmu.edu/new-user-information/){:target="_blank" rel="noopener"}. The pre-course survey should have informed us whether you already have an account.
-
-1. Click on the "HOPPER Desktop option".
-2. You will be moved to a page called "Interactive Sessions" and given options to launch an interactive desktop session.
-    * Number of hours: Your session will expire automatically after the selected number of hours. Since this class lasts 1:15, select **2** hours (you may want to set a longer time when you are working outside of class).
-    * Number of cores: Select **1**. We will not do any massively parallel computing that requires more than one core. We will run some Python packages that take advantage of multiple CPUs simultaneously within the same core.
-    * There is an option to be notified by email when your session becomes available. For such a small request, your session is typically ready after only a few seconds - it is not necessary to request email notification unless you are making a very large request (many nodes) for which resources may not be immediately available.
-3. A new browser tab will open and present you with a virtual Linux desktop. Click on the "terminal emulator" icon at the bottom to launch a session in a terminal window. Your session will start in your home directory on HOPPER.  
 
 
 ### Connecting to HOPPER via `ssh`
 
 As an alternative to the HOPPER desktop, you may access HOPPER via a terminal window on your laptop running secure shell (ssh) software. The software differs based on what type of computer you have. 
 
-#### Mac OS
+#### MacOS
 For a Mac computer, use software called [Xquartz](https://www.xquartz.org/){:target="_blank" rel="noopener"}, which takes advantage of the fact that Mac OS is built on top of Unix.
 
 #### Windows
-For a Windows computer, use software called [MobusXterm](https://mobaxterm.mobatek.net/){:target="_blank" rel="noopener"}.
+For a Windows computer, use software called [MobaXterm](https://mobaxterm.mobatek.net/){:target="_blank" rel="noopener"}. Windows users can also install the Windows "Terminal" application from the Microsoft Store free of charge. The Terminal application can use `ssh` similar to Linux and MacOS. 
 
 #### Linux
 The default Shell for Linux operating systems is usually `bash`. On most versions of Linux, it is accessible by running the (Gnome) Terminal or (KDE) Konsole or `xterm`, which can be found via the applications menu or the search bar. If your machine is set up to use something other than `bash`, you can run it by opening a terminal session and typing `bash`.
@@ -95,7 +87,8 @@ $ ssh -Y username@hopper.orc.gmu.edu
 Enter your password when prompted.
 
 #### On Windows
-1. Launch the MobusXterm software you downloaded.  
+With MobaXterm:
+1. Launch the MobaXterm software you downloaded.  
 2. Click `Session`->`SSH` 
 3. In the `Remote host` box, enter `hopper.orc.gmu.edu` 
 4. Check the `Specify username` box and enter your `username`
@@ -103,7 +96,15 @@ Enter your password when prompted.
 6. Enter your password when prompted
 7. Select No when asked to save your password.  
 
-If this is the first time you have logged in, you will be required to change your password.  
+With the Windows Terminal application:
+1. Launch the Terminal application from the Windows Start Menu. To connect to HOPPER, type the following and replace `username` with your Mason ID:
+
+~~~
+$ ssh -Y username@hopper.orc.gmu.edu
+~~~
+{: .language-bash}
+
+If this is the first time you have logged in, you will be required to change your password.
 
 > ## Password Policies
 >
